@@ -20,16 +20,12 @@ namespace LojaCarros.Controllers
             _context = context;
         }
 
-        // NOVO MÉTODO: Gera um Chassi no Padrão VIN Básico (BR + Ano + 12 Alfanuméricos)
         private string GenerateUniqueChassi()
         {
-            // 1. Prefixo Fixo: BR (Brasil/Marca)
             string prefixo = "BR";
 
-            // 2. Último dígito do Ano Atual (Assumindo que é o ano de entrada/modelo)
             string anoModeloDigito = DateTime.Now.ToString("yy")[1].ToString(); // Ex: 5 (para 2025)
 
-            // 3. Gera 12 caracteres alfanuméricos randômicos para unicidade
             var random = new Random();
             var randomSuffix = new string(Enumerable.Repeat(ChassiChars, 12)
               .Select(s => s[random.Next(s.Length)]).ToArray());
@@ -39,7 +35,6 @@ namespace LojaCarros.Controllers
             // Verifica se o Chassi gerado já existe no banco de dados
             while (_context.Carros.Any(c => c.Chassi == chassi))
             {
-                // Se o chassi já existe (chance mínima, mas possível), gera um novo sufixo
                 randomSuffix = new string(Enumerable.Repeat(ChassiChars, 12)
                    .Select(s => s[random.Next(s.Length)]).ToArray());
                 chassi = $"{prefixo}{anoModeloDigito}{randomSuffix}";
@@ -75,11 +70,10 @@ namespace LojaCarros.Controllers
         // GET: Carros/Create
         public IActionResult Create()
         {
-            // CRUCIAL: Cria uma nova instância de Carro e pré-preenche o Chassi
             var novoCarro = new Carro
             {
                 Chassi = GenerateUniqueChassi(),
-                Vendido = false // Garante que o padrão é falso ao criar
+                Vendido = false
             };
             return View(novoCarro);
         }
@@ -89,15 +83,13 @@ namespace LojaCarros.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Marca,Modelo,AnoFabricacao,AnoModelo,Chassi,Preco,Vendido")] Carro carro)
         {
-            // Verifica a unicidade do Chassi (segurança extra)
+            // Verifica a unicidade do Chassi
             if (_context.Carros.Any(c => c.Chassi == carro.Chassi))
             {
                 ModelState.AddModelError("Chassi", "O número de Chassi gerado já existe. Por favor, tente novamente.");
-                // Se falhar na unicidade, regera um novo Chassi para a próxima tentativa
                 carro.Chassi = GenerateUniqueChassi();
             }
 
-            // Note: Adicionei Marca, AnoFabricacao e AnoModelo ao Bind.
             if (ModelState.IsValid)
             {
                 _context.Add(carro);
