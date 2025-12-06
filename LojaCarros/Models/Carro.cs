@@ -18,9 +18,6 @@ namespace LojaCarros.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Preco { get; set; }
 
-        // --- IMPLEMENTAÇÃO DO CONTROLE DE ESTOQUE ---
-        // NOVO CAMPO: Indica se o carro já foi vendido.
-        // O padrão (false) significa que está disponível.
         public bool Vendido { get; set; } = false;
 
         // Associações
