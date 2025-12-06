@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LojaCarros.Data;
 using LojaCarros.Models;
-using System.Text.Json; // Necessário para serializar preços para o JavaScript
+using System.Text.Json;
 
 namespace LojaCarros.Controllers
 {
@@ -22,10 +22,8 @@ namespace LojaCarros.Controllers
             _context = context;
         }
 
-        // NOVO MÉTODO: Gera um número de nota baseado na data/hora e aleatoriedade
         private string GenerateUniqueNoteNumber()
         {
-            // Usa milissegundos (fff) para maximizar a unicidade em um curto período
             string timestamp = DateTime.Now.ToString("yyyyMMddHHmmssfff");
             Random rnd = new Random();
             int randomPart = rnd.Next(100, 999);
