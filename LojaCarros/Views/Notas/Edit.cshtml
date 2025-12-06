@@ -1,0 +1,90 @@
+﻿@model LojaCarros.Models.Nota
+
+@{
+    ViewData["Title"] = "Editar Nota";
+}
+
+<h1>Editar Nota</h1>
+
+<h4>Detalhes da Venda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" readonly="readonly" />
+                <input type="hidden" asp-for="Numero" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label">Comprador</label>
+                <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                <span asp-validation-for="ClienteId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="VendedorId" class="control-label">Vendedor</label>
+                <select asp-for="VendedorId" class="form-control" asp-items="ViewBag.VendedorId"></select>
+                <span asp-validation-for="VendedorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CarroId" class="control-label">Carro Vendido</label>
+                <input value="@Model.Carro.Modelo" class="form-control" readonly="readonly" />
+                <input type="hidden" asp-for="CarroId" />
+                <span asp-validation-for="CarroId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataEmissao" class="control-label"></label>
+                <input asp-for="DataEmissao" type="date" class="form-control" />
+                <span asp-validation-for="DataEmissao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Garantia" /> @Html.DisplayNameFor(model => model.Garantia)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ValorVenda" class="control-label"></label>
+                <input asp-for="ValorVenda" type="text" class="form-control"
+                       value="@Model.ValorVenda.ToString("N2")" />
+                <span asp-validation-for="ValorVenda" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $.validator.methods.range = function (value, element, param) {
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        };
+
+        $.validator.methods.number = function (value, element) {
+            // Permite a formatação de número pt-BR (ponto de milhar, vírgula decimal)
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:\.\d{3})+)(?:,\d+)?$/.test(value);
+        };
+    </script>
+}

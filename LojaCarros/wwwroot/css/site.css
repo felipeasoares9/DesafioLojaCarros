@@ -1,0 +1,175 @@
+/* === 1. VARIÁVEIS DE CORES === */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background-light: #f8f9fa;
+    --card-background: #ffffff;
+    --border-color: #dee2e6;
+    --text-color: #343a40;
+    --text-muted: #6c757d;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding-top: 5rem;
+}
+
+/* Garante que o rodapé esteja no fluxo e tenha estilo */
+footer {
+    position: relative !important;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+/* === 3. TIPOGRAFIA E TÍTULOS === */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-weight: 300;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* === 4. ESTILO DE BOTÕES GERAIS === */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+    }
+
+/* === 5. ESTILO DE FORMULÁRIOS === */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.75rem 0.6rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* Estilo para campos somente leitura (readonly) */
+    .form-control[readonly] {
+        background-color: #e9ecef;
+        opacity: 0.7;
+    }
+
+.row {
+    margin-top: 1rem;
+}
+
+.col-md-4 > form, .col-md-6 > div, .col-md-8 > div, .col-md-12 > div {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+/* Tabela (Listas Index) */
+.table {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+    .table thead th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+    }
+
+    /* Estilo Base para os links/botões da tabela */
+    .table a {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        text-align: center;
+        border: 1px solid transparent;
+        transition: all 0.2s ease-in-out;
+    }
+
+/* Detalhes (Azul/Primário) */
+.btn-details {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+    .btn-details:hover {
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+        color: white;
+    }
+
+/* Editar (Amarelo/Warning) */
+.btn-edit {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #343a40;
+}
+
+    .btn-edit:hover {
+        background-color: #e0a800;
+        border-color: #e0a800;
+        color: #343a40;
+    }
+
+/* Excluir (Vermelho/Danger) */
+.btn-delete {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+    .btn-delete:hover {
+        background-color: #c82333;
+        border-color: #c82333;
+        color: white;
+    }
+
+.main-content-spacing {
+    padding-bottom: 6rem !important;
+}

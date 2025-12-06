@@ -1,0 +1,74 @@
+﻿@model LojaCarros.Models.Nota
+
+@{
+    ViewData["Title"] = "Detalhes da Venda";
+}
+
+<h1>Detalhes da Venda</h1>
+
+<div>
+    <h4>Nota Fiscal @Html.DisplayFor(model => model.Numero)</h4>
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.DataEmissao)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.DataEmissao)
+        </dd>
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Garantia)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Garantia)
+        </dd>
+
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Comprador)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Comprador.Nome) - CPF: @Html.DisplayFor(model => model.Comprador.Cpf)
+        </dd>
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Vendedor.Nome) (Matrícula: @Html.DisplayFor(model => model.Vendedor.Matricula))
+        </dd>
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.Carro)
+        </dt>
+        <dd class = "col-sm-9">
+            @Html.DisplayFor(model => model.Carro.Marca) @Html.DisplayFor(model => model.Carro.Modelo) (@Html.DisplayFor(model => model.Carro.AnoModelo))
+        </dd>
+        
+        <dt class = "col-sm-3">
+            @Html.DisplayNameFor(model => model.ValorVenda)
+        </dt>
+        <dd class = "col-sm-9">
+            @Model.ValorVenda.ToString("C2")
+        </dd>
+        
+        <dt class = "col-sm-3">
+            Comissão do Vendedor
+        </dt>
+        <dd class = "col-sm-9">
+            @Model.Comissao.ToString("C2") </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>

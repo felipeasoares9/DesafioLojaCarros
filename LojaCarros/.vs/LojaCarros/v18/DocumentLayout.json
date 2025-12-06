@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\views\\notas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:views\\notas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\views\\notas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:views\\notas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\models\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:models\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|c:\\users\\neour\\pictures\\carcenter\\lojacarros\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57F67EFE-3DF4-EB46-C363-C53A31FD4A64}|LojaCarros.csproj|solutionrelative:models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T14:22:09.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Data\\DbInitializer.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T14:17:55.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Carro.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Carro.cs",
+              "RelativeDocumentMoniker": "Models\\Carro.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Carro.cs",
+              "RelativeToolTip": "Models\\Carro.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T02:29:03.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Views\\Notas\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Notas\\Details.cshtml",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Views\\Notas\\Details.cshtml",
+              "RelativeToolTip": "Views\\Notas\\Details.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswEkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T02:22:07.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Nota.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Nota.cs",
+              "RelativeDocumentMoniker": "Models\\Nota.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Models\\Nota.cs",
+              "RelativeToolTip": "Models\\Nota.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T01:50:58.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Views\\Notas\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Notas\\Create.cshtml",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Views\\Notas\\Create.cshtml",
+              "RelativeToolTip": "Views\\Notas\\Create.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-06T01:51:08.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotasController.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Controllers\\NotasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotasController.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Controllers\\NotasController.cs",
+              "RelativeToolTip": "Controllers\\NotasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T01:49:16.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\neour\\Pictures\\CarCenter\\LojaCarros\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T01:43:07.457Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

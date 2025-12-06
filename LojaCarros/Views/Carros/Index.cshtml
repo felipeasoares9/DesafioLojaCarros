@@ -1,0 +1,79 @@
+﻿@model IEnumerable<LojaCarros.Models.Carro>
+
+@{
+    ViewData["Title"] = "Carros em Estoque";
+}
+
+<h1>Estoque de Carros</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Adicionar Novo Carro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoFabricacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoModelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chassi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                Status de Venda
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnoFabricacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AnoModelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chassi)
+                </td>
+                <td>
+                    @item.Preco.ToString("C2")
+                </td>
+                <td>
+                    @if (item.Vendido)
+                    {
+                        <span class="badge bg-danger">Vendido</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Em Estoque</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn-edit">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn-details">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn-delete">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

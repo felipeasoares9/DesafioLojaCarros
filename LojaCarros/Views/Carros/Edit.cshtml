@@ -1,0 +1,88 @@
+﻿@model LojaCarros.Models.Carro
+
+@{
+    ViewData["Title"] = "Editar Carro";
+}
+
+<h1>Editar Carro</h1>
+
+<h4>Detalhes do Carro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <input asp-for="Marca" class="form-control" />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AnoFabricacao" class="control-label"></label>
+                <input asp-for="AnoFabricacao" class="form-control" />
+                <span asp-validation-for="AnoFabricacao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AnoModelo" class="control-label"></label>
+                <input asp-for="AnoModelo" class="form-control" />
+                <span asp-validation-for="AnoModelo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Chassi" class="control-label"></label>
+                <input asp-for="Chassi" class="form-control" readonly="readonly" />
+                <span asp-validation-for="Chassi" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" type="text" class="form-control"
+                       value="@Model.Preco.ToString("N2")" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Vendido" /> @Html.DisplayNameFor(model => model.Vendido)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $.validator.methods.range = function (value, element, param) {
+            // Permite range validation com vírgula decimal
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        };
+
+        $.validator.methods.number = function (value, element) {
+            // Permite a formatação de número pt-BR (ponto de milhar, vírgula decimal)
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:\.\d{3})+)(?:,\d+)?$/.test(value);
+        };
+    </script>
+}
