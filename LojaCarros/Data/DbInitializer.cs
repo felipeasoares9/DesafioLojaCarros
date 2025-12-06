@@ -16,7 +16,7 @@ namespace LojaCarros.Data
             // Se o banco já tiver carros, não faz o Seeding novamente.
             if (context.Carros.Any())
             {
-                return;   // Banco de dados já populado
+                return;
             }
 
             // --- 1. Dados de Carros ---
@@ -44,7 +44,6 @@ namespace LojaCarros.Data
             context.Carros.AddRange(carros);
             context.SaveChanges();
 
-            // --- 2. Dados de Clientes (Corrigido para usar Cpf minúsculo) ---
             var clientes = new Cliente[]
             {
                 new Cliente {
@@ -53,7 +52,6 @@ namespace LojaCarros.Data
                     Email = "maria@example.com",
                     Telefone = "51999998888",
                     Endereco = "Rua das Flores, 100",
-                    // AJUSTE: Usar 'Cpf' (minúsculo)
                     Cpf = "12345678900"
                 },
                 new Cliente {
@@ -62,14 +60,11 @@ namespace LojaCarros.Data
                     Email = "joao@example.com",
                     Telefone = "51988887777",
                     Endereco = "Avenida Principal, 500",
-                    // AJUSTE: Usar 'Cpf' (minúsculo)
                     Cpf = "98765432100"
                 },
             };
             context.Clientes.AddRange(clientes);
             context.SaveChanges();
-
-            // ... Adicionar Vendedores e Notas (se necessário) ...
         }
     }
 }
