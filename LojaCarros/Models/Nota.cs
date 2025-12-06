@@ -23,7 +23,6 @@ namespace LojaCarros.Models
         // Referência ao Comprador (Cliente)
         public int ClienteId { get; set; }
         [ForeignKey("ClienteId")]
-        // O " = null! " é usado para silenciar o warning CS8618 no .NET 6/7/8
         public Cliente Comprador { get; set; } = null!;
 
         // Referência ao Vendedor
